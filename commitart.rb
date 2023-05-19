@@ -89,7 +89,7 @@ module CommitArt
     end
     # get the stuff we need from the repo (head commit, tree, etc.)
     curr_ref = repo.head.name
-    curr_commit = repo.lookup(repo.head.target)
+    curr_commit = repo.lookup(repo.head.target.oid)
 
     # create the author hash
     time = date.to_i
